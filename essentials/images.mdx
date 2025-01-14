@@ -1,6 +1,6 @@
 ---
-title: 'Images and Embeds'
-description: 'Add image, video, and other HTML elements'
+title: 'Imágenes e Incrustaciones'
+description: 'Añadir imágenes, videos y otros elementos HTML'
 icon: 'image'
 ---
 
@@ -9,33 +9,33 @@ icon: 'image'
   src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
 />
 
-## Image
+## Imágenes
 
-### Using Markdown
+### Usando Markdown
 
-The [markdown syntax](https://www.markdownguide.org/basic-syntax/#images) lets you add images using the following code
+La [sintaxis de markdown](https://www.markdownguide.org/basic-syntax/#images) te permite añadir imágenes usando el siguiente código
 
 ```md
-![title](/path/image.jpg)
+![título](/path/image.jpg)
 ```
 
-Note that the image file size must be less than 5MB. Otherwise, we recommend hosting on a service like [Cloudinary](https://cloudinary.com/) or [S3](https://aws.amazon.com/s3/). You can then use that URL and embed.
+Ten en cuenta que el tamaño del archivo de imagen debe ser menor a 5MB. De lo contrario, recomendamos alojarlo en un servicio como [Cloudinary](https://cloudinary.com/) o [S3](https://aws.amazon.com/s3/). Luego puedes usar esa URL e incrustarla.
 
-### Using Embeds
+### Usando Incrustaciones
 
-To get more customizability with images, you can also use [embeds](/writing-content/embed) to add images
+Para obtener más personalización con las imágenes, también puedes usar [incrustaciones](/writing-content/embed) para añadir imágenes
 
 ```html
 <img height="200" src="/path/image.jpg" />
 ```
 
-## Embeds and HTML elements
+## Incrustaciones y elementos HTML
 
 <iframe
   width="560"
   height="315"
   src="https://www.youtube.com/embed/4KzFe50RQkQ"
-  title="YouTube video player"
+  title="Reproductor de video de YouTube"
   frameBorder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
@@ -46,13 +46,13 @@ To get more customizability with images, you can also use [embeds](/writing-cont
 
 <Tip>
 
-Mintlify supports [HTML tags in Markdown](https://www.markdownguide.org/basic-syntax/#html). This is helpful if you prefer HTML tags to Markdown syntax, and lets you create documentation with infinite flexibility.
+Mintlify soporta [etiquetas HTML en Markdown](https://www.markdownguide.org/basic-syntax/#html). Esto es útil si prefieres las etiquetas HTML a la sintaxis de Markdown, y te permite crear documentación con flexibilidad infinita.
 
 </Tip>
 
 ### iFrames
 
-Loads another HTML page within the document. Most commonly used for embedding videos.
+Carga otra página HTML dentro del documento. Se utiliza más comúnmente para incrustar videos.
 
 ```html
 <iframe src="https://www.youtube.com/embed/4KzFe50RQkQ"> </iframe>
