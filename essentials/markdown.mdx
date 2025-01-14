@@ -1,85 +1,85 @@
 ---
 title: 'Markdown Syntax'
-description: 'Text, title, and styling in standard markdown'
+description: 'Tekst, titel en opmaak in standaard markdown'
 icon: 'text-size'
 ---
 
-## Titles
+## Titels
 
-Best used for section headers.
+Het beste te gebruiken voor sectiekoppen.
 
 ```md
-## Titles
+## Titels
 ```
 
-### Subtitles
+### Subtitels
 
-Best use to subsection headers.
+Het beste te gebruiken voor subsectiekoppen.
 
 ```md
-### Subtitles
+### Subtitels
 ```
 
 <Tip>
 
-Each **title** and **subtitle** creates an anchor and also shows up on the table of contents on the right.
+Elke **titel** en **subtitel** maakt een anker aan en verschijnt ook in de inhoudsopgave aan de rechterkant.
 
 </Tip>
 
-## Text Formatting
+## Tekstopmaak
 
-We support most markdown formatting. Simply add `**`, `_`, or `~` around text to format it.
+We ondersteunen de meeste markdown-opmaak. Voeg simpelweg `**`, `_`, of `~` rond tekst toe om deze op te maken.
 
-| Style         | How to write it   | Result          |
-| ------------- | ----------------- | --------------- |
-| Bold          | `**bold**`        | **bold**        |
-| Italic        | `_italic_`        | _italic_        |
-| Strikethrough | `~strikethrough~` | ~strikethrough~ |
+| Stijl          | Hoe te schrijven  | Resultaat       |
+| -------------- | ----------------- | --------------- |
+| Vetgedrukt     | `**vet**`        | **vet**         |
+| Cursief        | `_cursief_`       | _cursief_       |
+| Doorgestreept  | `~doorgestreept~` | ~doorgestreept~ |
 
-You can combine these. For example, write `**_bold and italic_**` to get **_bold and italic_** text.
+Je kunt deze combineren. Schrijf bijvoorbeeld `**_vet en cursief_**` om **_vet en cursieve_** tekst te krijgen.
 
-You need to use HTML to write superscript and subscript text. That is, add `<sup>` or `<sub>` around your text.
+Je moet HTML gebruiken om superscript en subscript tekst te schrijven. Voeg hiervoor `<sup>` of `<sub>` rond je tekst toe.
 
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
+| Tekstgrootte | Hoe te schrijven           | Resultaat              |
+| ------------ | -------------------------- | --------------------- |
+| Superscript  | `<sup>superscript</sup>`   | <sup>superscript</sup> |
+| Subscript    | `<sub>subscript</sub>`     | <sub>subscript</sub>   |
 
-## Linking to Pages
+## Linken naar Pagina's
 
-You can add a link by wrapping text in `[]()`. You would write `[link to google](https://google.com)` to [link to google](https://google.com).
+Je kunt een link toevoegen door tekst in `[]()` te plaatsen. Je schrijft `[link naar google](https://google.com)` om een [link naar google](https://google.com) te maken.
 
-Links to pages in your docs need to be root-relative. Basically, you should include the entire folder path. For example, `[link to text](/writing-content/text)` links to the page "Text" in our components section.
+Links naar pagina's in je documentatie moeten root-relatief zijn. Je moet het volledige mappad opnemen. Bijvoorbeeld, `[link naar tekst](/writing-content/text)` linkt naar de pagina "Tekst" in onze componentensectie.
 
-Relative links like `[link to text](../text)` will open slower because we cannot optimize them as easily.
+Relatieve links zoals `[link naar tekst](../text)` zullen langzamer openen omdat we ze niet zo gemakkelijk kunnen optimaliseren.
 
-## Blockquotes
+## Blokcitaten
 
-### Singleline
+### Enkele regel
 
-To create a blockquote, add a `>` in front of a paragraph.
+Om een blokcitaat te maken, voeg je een `>` toe voor een paragraaf.
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
+> Dorothy volgde haar door vele van de prachtige kamers in haar kasteel.
 
 ```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
+> Dorothy volgde haar door vele van de prachtige kamers in haar kasteel.
 ```
 
-### Multiline
+### Meerdere regels
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
+> Dorothy volgde haar door vele van de prachtige kamers in haar kasteel.
 >
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+> De Heks droeg haar op de potten en ketels schoon te maken, de vloer te vegen en het vuur brandend te houden met hout.
 
 ```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
+> Dorothy volgde haar door vele van de prachtige kamers in haar kasteel.
 >
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+> De Heks droeg haar op de potten en ketels schoon te maken, de vloer te vegen en het vuur brandend te houden met hout.
 ```
 
 ### LaTeX
 
-Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex component.
+Mintlify ondersteunt [LaTeX](https://www.latex-project.org) via de Latex-component.
 
 <Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
 

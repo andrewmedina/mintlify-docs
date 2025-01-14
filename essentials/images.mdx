@@ -1,6 +1,6 @@
 ---
-title: 'Images and Embeds'
-description: 'Add image, video, and other HTML elements'
+title: 'Afbeeldingen en Insluitingen'
+description: 'Voeg afbeeldingen, video en andere HTML-elementen toe'
 icon: 'image'
 ---
 
@@ -9,27 +9,27 @@ icon: 'image'
   src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
 />
 
-## Image
+## Afbeeldingen
 
-### Using Markdown
+### Markdown Gebruiken
 
-The [markdown syntax](https://www.markdownguide.org/basic-syntax/#images) lets you add images using the following code
+De [markdown syntax](https://www.markdownguide.org/basic-syntax/#images) laat je afbeeldingen toevoegen met de volgende code
 
 ```md
-![title](/path/image.jpg)
+![titel](/path/image.jpg)
 ```
 
-Note that the image file size must be less than 5MB. Otherwise, we recommend hosting on a service like [Cloudinary](https://cloudinary.com/) or [S3](https://aws.amazon.com/s3/). You can then use that URL and embed.
+Let op dat de bestandsgrootte van de afbeelding kleiner moet zijn dan 5MB. Anders raden we aan om de afbeelding te hosten op een dienst zoals [Cloudinary](https://cloudinary.com/) of [S3](https://aws.amazon.com/s3/). Je kunt dan die URL gebruiken en insluiten.
 
-### Using Embeds
+### Insluitingen Gebruiken
 
-To get more customizability with images, you can also use [embeds](/writing-content/embed) to add images
+Voor meer aanpassingsmogelijkheden met afbeeldingen kun je ook [insluitingen](/writing-content/embed) gebruiken om afbeeldingen toe te voegen
 
 ```html
 <img height="200" src="/path/image.jpg" />
 ```
 
-## Embeds and HTML elements
+## Insluitingen en HTML-elementen
 
 <iframe
   width="560"
@@ -46,13 +46,13 @@ To get more customizability with images, you can also use [embeds](/writing-cont
 
 <Tip>
 
-Mintlify supports [HTML tags in Markdown](https://www.markdownguide.org/basic-syntax/#html). This is helpful if you prefer HTML tags to Markdown syntax, and lets you create documentation with infinite flexibility.
+Mintlify ondersteunt [HTML-tags in Markdown](https://www.markdownguide.org/basic-syntax/#html). Dit is handig als je de voorkeur geeft aan HTML-tags boven Markdown-syntax, en het stelt je in staat om documentatie te maken met oneindige flexibiliteit.
 
 </Tip>
 
 ### iFrames
 
-Loads another HTML page within the document. Most commonly used for embedding videos.
+Laadt een andere HTML-pagina binnen het document. Wordt meestal gebruikt voor het insluiten van video's.
 
 ```html
 <iframe src="https://www.youtube.com/embed/4KzFe50RQkQ"> </iframe>

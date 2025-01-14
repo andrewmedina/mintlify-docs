@@ -1,20 +1,20 @@
 ---
-title: 'Navigation'
-description: 'The navigation field in mint.json defines the pages that go in the navigation menu'
+title: 'Navigatie'
+description: 'Het navigatieveld in mint.json definieert de pagina's die in het navigatiemenu komen'
 icon: 'map'
 ---
 
-The navigation menu is the list of links on every website.
+Het navigatiemenu is de lijst met links op elke website.
 
-You will likely update `mint.json` every time you add a new page. Pages do not show up automatically.
+Je zult waarschijnlijk `mint.json` bijwerken elke keer dat je een nieuwe pagina toevoegt. Pagina's verschijnen niet automatisch.
 
-## Navigation syntax
+## Navigatie syntax
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+Onze navigatie syntax is recursief, wat betekent dat je geneste navigatiegroepen kunt maken. Je hoeft `.mdx` niet op te nemen in paginanamen.
 
 <CodeGroup>
 
-```json Regular Navigation
+```json Normale Navigatie
 "navigation": [
     {
         "group": "Getting Started",
@@ -23,7 +23,7 @@ Our navigation syntax is recursive which means you can make nested navigation gr
 ]
 ```
 
-```json Nested Navigation
+```json Geneste Navigatie
 "navigation": [
     {
         "group": "Getting Started",
@@ -40,27 +40,27 @@ Our navigation syntax is recursive which means you can make nested navigation gr
 
 </CodeGroup>
 
-## Folders
+## Mappen
 
-Simply put your MDX files in folders and update the paths in `mint.json`.
+Plaats je MDX-bestanden eenvoudig in mappen en werk de paden bij in `mint.json`.
 
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+Bijvoorbeeld, om een pagina te hebben op `https://yoursite.com/your-folder/your-page` zou je een map maken met de naam `your-folder` met daarin een MDX-bestand genaamd `your-page.mdx`.
 
 <Warning>
 
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
+Je kunt `api` niet gebruiken als mapnaam tenzij je deze in een andere map nest. Mintlify gebruikt Next.js, dat de `api`-map op het hoogste niveau reserveert voor interne serveraanroepen. Een mapnaam zoals `api-reference` zou wel worden geaccepteerd.
 
 </Warning>
 
-```json Navigation With Folder
+```json Navigatie Met Map
 "navigation": [
     {
-        "group": "Group Name",
+        "group": "Groepsnaam",
         "pages": ["your-folder/your-page"]
     }
 ]
 ```
 
-## Hidden Pages
+## Verborgen Pagina's
 
-MDX files not included in `mint.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+MDX-bestanden die niet zijn opgenomen in `mint.json` verschijnen niet in de zijbalk maar zijn toegankelijk via de zoekbalk en door er direct naartoe te linken.
