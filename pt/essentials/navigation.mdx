@@ -1,0 +1,84 @@
+# Navegação
+
+A navegação é uma parte fundamental de qualquer documentação. O Starlight fornece várias ferramentas integradas para ajudar você a organizar seus documentos e ajudar os leitores a encontrar o que precisam.
+
+## Navegação Lateral
+
+A barra lateral principal é a principal forma de navegação na maioria dos sites de documentação. O Starlight gera automaticamente sua configuração de navegação lateral com base na estrutura de arquivos do seu projeto.
+
+### Ordenando Páginas
+
+Por padrão, as páginas são ordenadas alfabeticamente pelo nome do arquivo. Por exemplo, uma página em `about.md` aparecerá antes de `projeto.md`.
+
+Você pode sobrescrever isso adicionando um número de `ordem` ao frontmatter de uma página. Páginas com números menores aparecerão primeiro, e páginas sem um valor de ordem serão exibidas após as páginas ordenadas.
+
+```md
+---
+# frontmatter.md
+title: Minha Página
+ordem: 2
+---
+```
+
+### Agrupando Páginas
+
+Você pode agrupar páginas relacionadas em subgrupos na barra lateral usando diretórios.
+
+Por exemplo, esta estrutura de arquivos gerará uma seção de "Conceitos Básicos" na barra lateral contendo links para as páginas "Introdução" e "Configuração":
+
+```
+docs/
+  conceitos-basicos/
+    introducao.md
+    configuracao.md
+```
+
+#### Grupos Personalizados
+
+Você pode personalizar como um grupo é exibido adicionando um arquivo `index.md` ou `index.mdx` ao diretório. Este arquivo pode definir o título do grupo e a ordem em que ele aparece na barra lateral.
+
+```md
+---
+# src/content/docs/conceitos-basicos/index.md
+title: Começando
+ordem: 2
+---
+```
+
+#### Links Externos
+
+Você também pode incluir links externos em sua navegação lateral configurando o campo `starlight.sidebar` em seu arquivo `astro.config`. As entradas podem incluir um `href` externo e opcionalmente um indicador `external: true` para adicionar um ícone de link externo.
+
+## Links Anteriores e Próximos
+
+O Starlight automaticamente adiciona links de navegação "Anterior" e "Próximo" ao final de cada página, baseados na ordem da sua barra lateral.
+
+## Menu de Links no Cabeçalho
+
+O menu de links no cabeçalho do Starlight é mostrado no topo de cada página. Ele suporta tanto links internos quanto externos e pode ser configurado no seu arquivo `astro.config`.
+
+## Cartões de Link
+
+Você pode usar o componente integrado `<LinkCard />` do Starlight para criar links em destaque para outras páginas. Os cartões de link sempre aparecem em uma grade de dois por linha.
+
+```mdx
+import { LinkCard } from '@astrojs/starlight/components';
+
+<LinkCard
+  title="Personalizando o Starlight"
+  description="Aprenda a fazer seu site Starlight único com estilos personalizados, fontes e muito mais."
+  href="/pt/guias/customizacao/"
+/>
+```
+
+Use o auxiliar `<CardGrid />` para exibir cartões de link lado a lado em uma grade responsiva:
+
+```mdx
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <LinkCard title="Autoria de Conteúdo" href="/pt/guias/autoria-conteudo/" />
+  <LinkCard title="Componentes" href="/pt/guias/componentes/" />
+  <LinkCard title="Internacionalização" href="/pt/guias/i18n/" />
+</CardGrid>
+```

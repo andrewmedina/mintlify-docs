@@ -1,15 +1,15 @@
 ---
-title: 'Development'
-description: 'Preview changes locally to update your docs'
+title: 'Desenvolvimento'
+description: 'Visualize alterações localmente para atualizar sua documentação'
 ---
 
 <Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
+  **Pré-requisito**: Por favor, instale o Node.js (versão 19 ou superior) antes de prosseguir.
 </Info>
 
-Follow these steps to install and run Mintlify on your operating system:
+Siga estes passos para instalar e executar o Mintlify em seu sistema operacional:
 
-**Step 1**: Install Mintlify:
+**Passo 1**: Instale o Mintlify:
 
 <CodeGroup>
 
@@ -23,31 +23,31 @@ yarn global add mintlify
 
 </CodeGroup>
 
-**Step 2**: Navigate to the docs directory (where the `mint.json` file is located) and execute the following command:
+**Passo 2**: Navegue até o diretório da documentação (onde o arquivo `mint.json` está localizado) e execute o seguinte comando:
 
 ```bash
 mintlify dev
 ```
 
-A local preview of your documentation will be available at `http://localhost:3000`.
+Uma prévia local da sua documentação estará disponível em `http://localhost:3000`.
 
-### Custom Ports
+### Portas Personalizadas
 
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. To run Mintlify on port 3333, for instance, use this command:
+Por padrão, o Mintlify usa a porta 3000. Você pode personalizar a porta em que o Mintlify é executado usando o sinalizador `--port`. Para executar o Mintlify na porta 3333, por exemplo, use este comando:
 
 ```bash
 mintlify dev --port 3333
 ```
 
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
+Se você tentar executar o Mintlify em uma porta que já está em uso, ele usará a próxima porta disponível:
 
 ```md
-Port 3000 is already in use. Trying 3001 instead.
+A porta 3000 já está em uso. Tentando a porta 3001.
 ```
 
-## Mintlify Versions
+## Versões do Mintlify
 
-Please note that each CLI release is associated with a specific version of Mintlify. If your local website doesn't align with the production version, please update the CLI:
+Por favor, note que cada versão do CLI está associada a uma versão específica do Mintlify. Se seu site local não estiver alinhado com a versão de produção, por favor, atualize o CLI:
 
 <CodeGroup>
 
@@ -61,46 +61,45 @@ yarn global upgrade mintlify
 
 </CodeGroup>
 
-## Validating Links
+## Validando Links
 
-The CLI can assist with validating reference links made in your documentation. To identify any broken links, use the following command:
+O CLI pode ajudar na validação de links de referência feitos em sua documentação. Para identificar quaisquer links quebrados, use o seguinte comando:
 
 ```bash
 mintlify broken-links
 ```
 
-## Deployment
+## Implantação
 
 <Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
+  Editores ilimitados disponíveis no [Plano Pro](https://mintlify.com/pricing) e superiores.
 </Tip>
 
-If the deployment is successful, you should see the following:
+Se a implantação for bem-sucedida, você deverá ver o seguinte:
 
 <Frame>
   <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
 </Frame>
 
-## Code Formatting
+## Formatação de Código
 
-We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
+Sugerimos usar extensões em seu IDE para reconhecer e formatar MDX. Se você é um usuário do VSCode, considere a [extensão MDX VSCode](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) para realce de sintaxe e o [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) para formatação de código.
 
-## Troubleshooting
+## Resolução de Problemas
 
 <AccordionGroup>
-  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
+  <Accordion title='Erro: Não foi possível carregar o módulo "sharp" usando o runtime darwin-arm64'>
 
-    This may be due to an outdated version of node. Try the following:
-    1. Remove the currently-installed version of mintlify: `npm remove -g mintlify`
-    2. Upgrade to Node v19 or higher.
-    3. Reinstall mintlify: `npm install -g mintlify`
+    Isso pode ser devido a uma versão desatualizada do node. Tente o seguinte:
+    1. Remova a versão atualmente instalada do mintlify: `npm remove -g mintlify`
+    2. Atualize para o Node v19 ou superior.
+    3. Reinstale o mintlify: `npm install -g mintlify`
   </Accordion>
 
-  <Accordion title="Issue: Encountering an unknown error">
+  <Accordion title="Problema: Encontrando um erro desconhecido">
   
-    Solution: Go to the root of your device and delete the \~/.mintlify folder. Afterwards, run `mintlify dev` again.
+    Solução: Vá até a raiz do seu dispositivo e exclua a pasta ~/.mintlify. Em seguida, execute `mintlify dev` novamente.
   </Accordion>
 </AccordionGroup>
 
-Curious about what changed in the CLI version? [Check out the CLI changelog.](https://www.npmjs.com/package/mintlify?activeTab=versions)
+Curioso sobre o que mudou na versão do CLI? [Confira o changelog do CLI.](https://www.npmjs.com/package/mintlify?activeTab=versions)
