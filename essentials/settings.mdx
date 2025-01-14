@@ -1,33 +1,33 @@
 ---
-title: 'Global Settings'
-description: 'Mintlify gives you complete control over the look and feel of your documentation using the mint.json file'
+title: 'Globale Instellingen'
+description: 'Mintlify geeft je volledige controle over het uiterlijk van je documentatie via het mint.json bestand'
 icon: 'gear'
 ---
 
-Every Mintlify site needs a `mint.json` file with the core configuration settings. Learn more about the [properties](#properties) below.
+Elke Mintlify site heeft een `mint.json` bestand nodig met de belangrijkste configuratie-instellingen. Leer meer over de [eigenschappen](#properties) hieronder.
 
-## Properties
+## Eigenschappen
 
 <ResponseField name="name" type="string" required>
-Name of your project. Used for the global title.
+Naam van je project. Wordt gebruikt voor de globale titel.
 
-Example: `mintlify`
+Voorbeeld: `mintlify`
 
 </ResponseField>
 
 <ResponseField name="navigation" type="Navigation[]" required>
-  An array of groups with all the pages within that group
+  Een array van groepen met alle pagina's binnen die groep
   <Expandable title="Navigation">
     <ResponseField name="group" type="string">
-    The name of the group.
+    De naam van de groep.
 
-    Example: `Settings`
+    Voorbeeld: `Instellingen`
 
     </ResponseField>
     <ResponseField name="pages" type="string[]">
-    The relative paths to the markdown files that will serve as pages.
+    De relatieve paden naar de markdown bestanden die als pagina's zullen dienen.
 
-    Example: `["customization", "page"]`
+    Voorbeeld: `["customization", "page"]`
 
     </ResponseField>
 
@@ -35,46 +35,44 @@ Example: `mintlify`
 </ResponseField>
 
 <ResponseField name="logo" type="string or object">
-  Path to logo image or object with path to "light" and "dark" mode logo images
+  Pad naar het logo of object met pad naar "light" en "dark" mode logo afbeeldingen
   <Expandable title="Logo">
     <ResponseField name="light" type="string">
-      Path to the logo in light mode
+      Pad naar het logo in light mode
     </ResponseField>
     <ResponseField name="dark" type="string">
-      Path to the logo in dark mode
+      Pad naar het logo in dark mode
     </ResponseField>
     <ResponseField name="href" type="string" default="/">
-      Where clicking on the logo links you to
+      Waar het klikken op het logo naar toe leidt
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="favicon" type="string">
-  Path to the favicon image
+  Pad naar de favicon afbeelding
 </ResponseField>
 
 <ResponseField name="colors" type="Colors">
-  Hex color codes for your global theme
+  Hex-kleurcodes voor je globale thema
   <Expandable title="Colors">
     <ResponseField name="primary" type="string" required>
-      The primary color. Used for most often for highlighted content, section
-      headers, accents, in light mode
+      De primaire kleur. Meestal gebruikt voor gemarkeerde inhoud, sectiekoppen en accenten in light mode
     </ResponseField>
     <ResponseField name="light" type="string">
-      The primary color for dark mode. Used for most often for highlighted
-      content, section headers, accents, in dark mode
+      De primaire kleur voor dark mode. Meestal gebruikt voor gemarkeerde inhoud, sectiekoppen en accenten in dark mode
     </ResponseField>
     <ResponseField name="dark" type="string">
-      The primary color for important buttons
+      De primaire kleur voor belangrijke knoppen
     </ResponseField>
     <ResponseField name="background" type="object">
-      The color of the background in both light and dark mode
+      De achtergrondkleur in zowel light als dark mode
       <Expandable title="Object">
         <ResponseField name="light" type="string" required>
-          The hex color code of the background in light mode
+          De hex-kleurcode van de achtergrond in light mode
         </ResponseField>
         <ResponseField name="dark" type="string" required>
-          The hex color code of the background in dark mode
+          De hex-kleurcode van de achtergrond in dark mode
         </ResponseField>
       </Expandable>
     </ResponseField>
@@ -82,15 +80,15 @@ Example: `mintlify`
 </ResponseField>
 
 <ResponseField name="topbarLinks" type="TopbarLink[]">
-  Array of `name`s and `url`s of links you want to include in the topbar
+  Array van `name`s en `url`s van links die je wilt opnemen in de topbalk
   <Expandable title="TopbarLink">
     <ResponseField name="name" type="string">
-    The name of the button.
+    De naam van de knop.
 
-    Example: `Contact us`
+    Voorbeeld: `Contact`
     </ResponseField>
     <ResponseField name="url" type="string">
-    The url once you click on the button. Example: `https://mintlify.com/docs`
+    De url wanneer je op de knop klikt. Voorbeeld: `https://mintlify.com/docs`
     </ResponseField>
 
   </Expandable>
@@ -99,137 +97,133 @@ Example: `mintlify`
 <ResponseField name="topbarCtaButton" type="Call to Action">
   <Expandable title="Topbar Call to Action">
     <ResponseField name="type" type={'"link" or "github"'} default="link">
-    Link shows a button. GitHub shows the repo information at the url provided including the number of GitHub stars.
+    Link toont een knop. GitHub toont de repo-informatie op de opgegeven url, inclusief het aantal GitHub-sterren.
     </ResponseField>
     <ResponseField name="url" type="string">
-    If `link`: What the button links to.
+    Bij `link`: Waar de knop naar verwijst.
     
-    If `github`: Link to the repository to load GitHub information from.
+    Bij `github`: Link naar de repository om GitHub-informatie van te laden.
     </ResponseField>
     <ResponseField name="name" type="string">
-    Text inside the button. Only required if `type` is a `link`.
+    Tekst in de knop. Alleen vereist als `type` een `link` is.
     </ResponseField>
 
   </Expandable>
 </ResponseField>
 
 <ResponseField name="versions" type="string[]">
-  Array of version names. Only use this if you want to show different versions
-  of docs with a dropdown in the navigation bar.
+  Array van versienamen. Gebruik dit alleen als je verschillende versies van documentatie wilt tonen met een dropdown in de navigatiebalk.
 </ResponseField>
 
 <ResponseField name="anchors" type="Anchor[]">
-  An array of the anchors, includes the `icon`, `color`, and `url`.
+  Een array van ankers, bevat de `icon`, `color`, en `url`.
   <Expandable title="Anchor">
     <ResponseField name="icon" type="string">
-    The [Font Awesome](https://fontawesome.com/search?q=heart) icon used to feature the anchor.
+    Het [Font Awesome](https://fontawesome.com/search?q=heart) icoon gebruikt voor het anker.
 
-    Example: `comments`
+    Voorbeeld: `comments`
     </ResponseField>
     <ResponseField name="name" type="string">
-    The name of the anchor label.
+    De naam van het ankerlabel.
 
-    Example: `Community`
+    Voorbeeld: `Community`
     </ResponseField>
     <ResponseField name="url" type="string">
-      The start of the URL that marks what pages go in the anchor. Generally, this is the name of the folder you put your pages in.
+      Het begin van de URL dat aangeeft welke pagina's bij het anker horen. Dit is meestal de naam van de map waarin je je pagina's plaatst.
     </ResponseField>
     <ResponseField name="color" type="string">
-      The hex color of the anchor icon background. Can also be a gradient if you pass an object with the properties `from` and `to` that are each a hex color.
+      De hex-kleur van de anker-icoon achtergrond. Kan ook een verloop zijn als je een object doorgeeft met de eigenschappen `from` en `to` die elk een hex-kleur zijn.
     </ResponseField>
     <ResponseField name="version" type="string">
-      Used if you want to hide an anchor until the correct docs version is selected.
+      Gebruikt als je een anker wilt verbergen tot de juiste docs-versie is geselecteerd.
     </ResponseField>
     <ResponseField name="isDefaultHidden" type="boolean" default="false">
-      Pass `true` if you want to hide the anchor until you directly link someone to docs inside it.
+      Stel in op `true` als je het anker wilt verbergen totdat je iemand direct linkt naar docs erin.
     </ResponseField>
     <ResponseField name="iconType" default="duotone" type="string">
-      One of: "brands", "duotone", "light", "sharp-solid", "solid", or "thin"
+      Een van: "brands", "duotone", "light", "sharp-solid", "solid", of "thin"
     </ResponseField>
 
   </Expandable>
 </ResponseField>
 
 <ResponseField name="topAnchor" type="Object">
-  Override the default configurations for the top-most anchor.
+  Overschrijf de standaardconfiguraties voor het bovenste anker.
   <Expandable title="Object">
     <ResponseField name="name" default="Documentation" type="string">
-      The name of the top-most anchor
+      De naam van het bovenste anker
     </ResponseField>
     <ResponseField name="icon" default="book-open" type="string">
-      Font Awesome icon.
+      Font Awesome icoon.
     </ResponseField>
     <ResponseField name="iconType" default="duotone" type="string">
-      One of: "brands", "duotone", "light", "sharp-solid", "solid", or "thin"
+      Een van: "brands", "duotone", "light", "sharp-solid", "solid", of "thin"
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="tabs" type="Tabs[]">
-  An array of navigational tabs.
+  Een array van navigatietabs.
   <Expandable title="Tabs">
     <ResponseField name="name" type="string">
-      The name of the tab label.
+      De naam van het tablabel.
     </ResponseField>
     <ResponseField name="url" type="string">
-      The start of the URL that marks what pages go in the tab. Generally, this
-      is the name of the folder you put your pages in.
+      Het begin van de URL dat aangeeft welke pagina's bij de tab horen. Dit is meestal de naam van de map waarin je je pagina's plaatst.
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="api" type="API">
-  Configuration for API settings. Learn more about API pages at [API Components](/api-playground/demo).
+  Configuratie voor API-instellingen. Leer meer over API-pagina's bij [API Components](/api-playground/demo).
   <Expandable title="API">
     <ResponseField name="baseUrl" type="string">
-      The base url for all API endpoints. If `baseUrl` is an array, it will enable for multiple base url
-      options that the user can toggle.
+      De basis-url voor alle API-endpoints. Als `baseUrl` een array is, maakt het meerdere basis-url opties mogelijk die de gebruiker kan wisselen.
     </ResponseField>
 
     <ResponseField name="auth" type="Auth">
       <Expandable title="Auth">
         <ResponseField name="method" type='"bearer" | "basic" | "key"'>
-          The authentication strategy used for all API endpoints.
+          De authenticatiestrategie gebruikt voor alle API-endpoints.
         </ResponseField>
         <ResponseField name="name" type="string">
-        The name of the authentication parameter used in the API playground.
+        De naam van de authenticatieparameter gebruikt in de API-playground.
 
-        If method is `basic`, the format should be `[usernameName]:[passwordName]`
+        Als de methode `basic` is, moet het formaat `[gebruikersnaamNaam]:[wachtwoordNaam]` zijn
         </ResponseField>
         <ResponseField name="inputPrefix" type="string">
-        The default value that's designed to be a prefix for the authentication input field.
+        De standaardwaarde die bedoeld is als voorvoegsel voor het authenticatie-invoerveld.
 
-        E.g. If an `inputPrefix` of `AuthKey` would inherit the default input result of the authentication field as `AuthKey`.
+        Bijv. Een `inputPrefix` van `AuthKey` zou het standaard invoerresultaat van het authenticatieveld erven als `AuthKey`.
         </ResponseField>
       </Expandable>
     </ResponseField>
 
     <ResponseField name="playground" type="Playground">
-      Configurations for the API playground
+      Configuraties voor de API-playground
 
       <Expandable title="Playground">
         <ResponseField name="mode" default="show" type='"show" | "simple" | "hide"'>
-          Whether the playground is showing, hidden, or only displaying the endpoint with no added user interactivity `simple`
+          Of de playground wordt getoond, verborgen is, of alleen het endpoint toont zonder toegevoegde gebruikersinteractiviteit `simple`
 
-          Learn more at the [playground guides](/api-playground/demo)
+          Leer meer in de [playground handleidingen](/api-playground/demo)
         </ResponseField>
       </Expandable>
     </ResponseField>
 
     <ResponseField name="maintainOrder" type="boolean">
-      Enabling this flag ensures that key ordering in OpenAPI pages matches the key ordering defined in the OpenAPI file.
+      Het inschakelen van deze vlag zorgt ervoor dat de sleutelvolgorde in OpenAPI-pagina's overeenkomt met de sleutelvolgorde gedefinieerd in het OpenAPI-bestand.
 
-      <Warning>This behavior will soon be enabled by default, at which point this field will be deprecated.</Warning>
+      <Warning>Dit gedrag zal binnenkort standaard worden ingeschakeld, waarna dit veld zal worden afgekeurd.</Warning>
     </ResponseField>
 
   </Expandable>
 </ResponseField>
 
 <ResponseField name="openapi" type="string | string[]">
-  A string or an array of strings of URL(s) or relative path(s) pointing to your
-  OpenAPI file.
+  Een string of een array van strings van URL(s) of relatieve pad(en) die naar je OpenAPI-bestand wijzen.
   
-  Examples:
+  Voorbeelden:
   <CodeGroup>
     ```json Absolute
     "openapi": "https://example.com/openapi.json"
@@ -245,9 +239,9 @@ Example: `mintlify`
 </ResponseField>
 
 <ResponseField name="footerSocials" type="FooterSocials">
-  An object of social media accounts where the key:property pair represents the social media platform and the account url.
+  Een object van sociale media-accounts waarbij het sleutel:eigenschap-paar het sociale mediaplatform en de account-url vertegenwoordigt.
   
-  Example: 
+  Voorbeeld: 
   ```json
   {
     "x": "https://x.com/mintlify",
@@ -256,50 +250,49 @@ Example: `mintlify`
   ```
   <Expandable title="FooterSocials">
     <ResponseField name="[key]" type="string">
-    One of the following values `website`, `facebook`, `x`, `discord`, `slack`, `github`, `linkedin`, `instagram`, `hacker-news`
+    Een van de volgende waarden `website`, `facebook`, `x`, `discord`, `slack`, `github`, `linkedin`, `instagram`, `hacker-news`
     
-    Example: `x`
+    Voorbeeld: `x`
     </ResponseField>
     <ResponseField name="property" type="string">
-    The URL to the social platform.
+    De URL naar het sociale platform.
     
-    Example: `https://x.com/mintlify`
+    Voorbeeld: `https://x.com/mintlify`
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="feedback" type="Feedback">
-  Configurations to enable feedback buttons
+  Configuraties om feedback-knoppen in te schakelen
 
   <Expandable title="Feedback">
     <ResponseField name="suggestEdit" type="boolean" default="false">
-    Enables a button to allow users to suggest edits via pull requests
+    Schakelt een knop in waarmee gebruikers bewerkingen kunnen voorstellen via pull requests
     </ResponseField>
     <ResponseField name="raiseIssue" type="boolean" default="false">
-    Enables a button to allow users to raise an issue about the documentation
+    Schakelt een knop in waarmee gebruikers een probleem kunnen melden over de documentatie
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="modeToggle" type="ModeToggle">
-  Customize the dark mode toggle.
+  Pas de dark mode schakelaar aan.
   <Expandable title="ModeToggle">
     <ResponseField name="default" type={'"light" or "dark"'}>
-      Set if you always want to show light or dark mode for new users. When not
-      set, we default to the same mode as the user's operating system.
+      Stel in als je altijd light of dark mode wilt tonen voor nieuwe gebruikers. Wanneer niet ingesteld, gebruiken we standaard dezelfde modus als het besturingssysteem van de gebruiker.
     </ResponseField>
     <ResponseField name="isHidden" type="boolean" default="false">
-      Set to true to hide the dark/light mode toggle. You can combine `isHidden` with `default` to force your docs to only use light or dark mode. For example:
+      Stel in op true om de dark/light mode schakelaar te verbergen. Je kunt `isHidden` combineren met `default` om je docs te dwingen alleen light of dark mode te gebruiken. Bijvoorbeeld:
       
       <CodeGroup>
-      ```json Only Dark Mode
+      ```json Alleen Dark Mode
       "modeToggle": {
         "default": "dark",
         "isHidden": true
       }
       ```
 
-      ```json Only Light Mode
+      ```json Alleen Light Mode
       "modeToggle": {
         "default": "light",
         "isHidden": true
@@ -313,6 +306,6 @@ Example: `mintlify`
 </ResponseField>
 
 <ResponseField name="backgroundImage" type="string">
-  A background image to be displayed behind every page. See example with
-  [Infisical](https://infisical.com/docs) and [FRPC](https://frpc.io).
+  Een achtergrondafbeelding die achter elke pagina wordt weergegeven. Zie voorbeeld bij
+  [Infisical](https://infisical.com/docs) en [FRPC](https://frpc.io).
 </ResponseField>
