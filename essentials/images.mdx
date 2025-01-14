@@ -1,6 +1,6 @@
 ---
-title: 'Images and Embeds'
-description: 'Add image, video, and other HTML elements'
+title: '画像と埋め込み'
+description: '画像、動画、その他のHTML要素を追加する'
 icon: 'image'
 ---
 
@@ -9,27 +9,27 @@ icon: 'image'
   src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
 />
 
-## Image
+## 画像
 
-### Using Markdown
+### Markdownの使用
 
-The [markdown syntax](https://www.markdownguide.org/basic-syntax/#images) lets you add images using the following code
+[markdown構文](https://www.markdownguide.org/basic-syntax/#images)を使用すると、以下のコードで画像を追加できます
 
 ```md
 ![title](/path/image.jpg)
 ```
 
-Note that the image file size must be less than 5MB. Otherwise, we recommend hosting on a service like [Cloudinary](https://cloudinary.com/) or [S3](https://aws.amazon.com/s3/). You can then use that URL and embed.
+画像ファイルのサイズは5MB未満である必要があることに注意してください。それ以上の場合は、[Cloudinary](https://cloudinary.com/)や[S3](https://aws.amazon.com/s3/)などのサービスでホストすることをお勧めします。そのURLを使用して埋め込むことができます。
 
-### Using Embeds
+### 埋め込みの使用
 
-To get more customizability with images, you can also use [embeds](/writing-content/embed) to add images
+画像をさらにカスタマイズするには、[埋め込み](/writing-content/embed)を使用して画像を追加することもできます
 
 ```html
 <img height="200" src="/path/image.jpg" />
 ```
 
-## Embeds and HTML elements
+## 埋め込みとHTML要素
 
 <iframe
   width="560"
@@ -46,13 +46,13 @@ To get more customizability with images, you can also use [embeds](/writing-cont
 
 <Tip>
 
-Mintlify supports [HTML tags in Markdown](https://www.markdownguide.org/basic-syntax/#html). This is helpful if you prefer HTML tags to Markdown syntax, and lets you create documentation with infinite flexibility.
+MintlifyはMarkdown内での[HTMLタグ](https://www.markdownguide.org/basic-syntax/#html)をサポートしています。これは、Markdown構文よりもHTMLタグを好む場合や、無限の柔軟性でドキュメントを作成したい場合に役立ちます。
 
 </Tip>
 
-### iFrames
+### iFrame
 
-Loads another HTML page within the document. Most commonly used for embedding videos.
+ドキュメント内に別のHTMLページを読み込みます。主に動画の埋め込みに使用されます。
 
 ```html
 <iframe src="https://www.youtube.com/embed/4KzFe50RQkQ"> </iframe>

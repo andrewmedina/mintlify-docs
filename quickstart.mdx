@@ -1,86 +1,87 @@
 ---
-title: 'Quickstart'
-description: 'Start building awesome documentation in under 5 minutes'
+title: 'クイックスタート'
+description: '5分以内に素晴らしいドキュメントの作成を開始'
 ---
 
-## Setup your development
+## 開発環境のセットアップ
 
-Learn how to update your docs locally and deploy them to the public.
+ドキュメントをローカルで更新し、公開する方法を学びましょう。
 
-### Edit and preview
+### 編集とプレビュー
 
 <AccordionGroup>
-  <Accordion icon="github" title="Clone your docs locally">
-    During the onboarding process, we created a repository on your Github with
-    your docs content. You can find this repository on our
-    [dashboard](https://dashboard.mintlify.com). To clone the repository
-    locally, follow these
-    [instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-    in your terminal.
+  <Accordion icon="github" title="ドキュメントをローカルにクローンする">
+    オンボーディングプロセス中に、GitHubにドキュメントのコンテンツを含むリポジトリを作成しました。
+    このリポジトリは[ダッシュボード](https://dashboard.mintlify.com)で確認できます。
+    リポジトリをローカルにクローンするには、ターミナルでこちらの
+    [手順](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    に従ってください。
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Preview changes">
-    Previewing helps you make sure your changes look as intended. We built a
-    command line interface to render these changes locally. 1. Install the
-    [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the
-    documentation changes locally with this command: ``` npm i -g mintlify ```
-    2. Run the following command at the root of your documentation (where
-    `mint.json` is): ``` mintlify dev ```
+  <Accordion icon="rectangle-terminal" title="変更をプレビューする">
+    プレビューは、変更が意図した通りに表示されることを確認するのに役立ちます。
+    これらの変更をローカルでレンダリングするためのコマンドラインインターフェースを構築しました。
+    1. [Mintlify CLI](https://www.npmjs.com/package/mintlify)をインストールして、
+    以下のコマンドでドキュメントの変更をローカルでプレビューできます：
+    ``` npm i -g mintlify ```
+    2. ドキュメントのルートディレクトリ（`mint.json`がある場所）で
+    以下のコマンドを実行してください：
+    ``` mintlify dev ```
   </Accordion>
 </AccordionGroup>
 
-### Deploy your changes
+### 変更のデプロイ
 
 <AccordionGroup>
 
-<Accordion icon="message-bot" title="Install our Github app">
-  Our Github app automatically deploys your changes to your docs site, so you
-  don't need to manage deployments yourself. You can find the link to install on
-  your [dashboard](https://dashboard.mintlify.com). Once the bot has been
-  successfully installed, there should be a check mark next to the commit hash
-  of the repo.
+<Accordion icon="message-bot" title="GitHubアプリをインストール">
+  当社のGitHubアプリは、ドキュメントサイトへの変更を自動的にデプロイするため、
+  デプロイメントを自分で管理する必要はありません。
+  インストールリンクは[ダッシュボード](https://dashboard.mintlify.com)で確認できます。
+  ボットが正常にインストールされると、リポジトリのコミットハッシュの横にチェックマークが表示されます。
 </Accordion>
-<Accordion icon="rocket" title="Push your changes">
-  [Commit and push your changes to
-  Git](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository#about-git-push)
-  for your changes to update in your docs site. If you push and don't see that
-  the Github app successfully deployed your changes, you can also manually
-  update your docs through our [dashboard](https://dashboard.mintlify.com).
+<Accordion icon="rocket" title="変更をプッシュ">
+  ドキュメントサイトを更新するには、[Gitに変更をコミットしてプッシュ](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository#about-git-push)
+  してください。プッシュ後にGitHubアプリが変更を正常にデプロイしていない場合は、
+  [ダッシュボード](https://dashboard.mintlify.com)から手動でドキュメントを更新することもできます。
 </Accordion>
 
 </AccordionGroup>
 
-## Update your docs
+## ドキュメントの更新
 
-Add content directly in your files with MDX syntax and React components. You can use any of our components, or even build your own.
+MDXシンタックスとReactコンポーネントを使用して、ファイルに直接コンテンツを追加できます。
+用意されているコンポーネントを使用するか、独自のコンポーネントを作成することができます。
 
 <CardGroup>
 
-<Card title="Style Your Docs" icon="paintbrush" href="/settings/global">
-  Add flair to your docs with personalized branding.
+<Card title="ドキュメントのスタイル設定" icon="paintbrush" href="/settings/global">
+  カスタマイズされたブランディングでドキュメントに魅力を加えましょう。
 </Card>
 
 <Card
-  title="Add API Endpoints"
+  title="APIエンドポイントの追加"
   icon="square-code"
   href="/api-playground/configuration"
 >
-  Implement your OpenAPI spec and enable API user interaction.
+  OpenAPI仕様を実装し、APIユーザーのインタラクションを可能にします。
 </Card>
 
 <Card
-  title="Integrate Analytics"
+  title="アナリティクスの統合"
   icon="chart-mixed"
   href="/analytics/supported-integrations"
 >
-  Draw insights from user interactions with your documentation.
+  ドキュメントのユーザーインタラクションから洞察を得ましょう。
 </Card>
 
 <Card
-  title="Host on a Custom Domain"
+  title="カスタムドメインでのホスティング"
   icon="browser"
   href="/settings/custom-domain/subdomain"
 >
-  Keep your docs on your own website's subdomain.
+  ドキュメントを自社ウェブサイトのサブドメインで管理します。
 </Card>
 
 </CardGroup>
+</newContent>
+</invoke>

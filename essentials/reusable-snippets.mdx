@@ -1,6 +1,6 @@
 ---
-title: Reusable Snippets
-description: Reusable, custom snippets to keep content in sync
+title: 再利用可能なスニペット
+description: コンテンツを同期させるための再利用可能なカスタムスニペット
 icon: 'recycle'
 ---
 
@@ -8,103 +8,101 @@ import SnippetIntro from '/snippets/snippet-intro.mdx';
 
 <SnippetIntro />
 
-## Creating a custom snippet
+## カスタムスニペットの作成
 
-**Pre-condition**: You must create your snippet file in the `snippets` directory.
+**前提条件**: スニペットファイルは`snippets`ディレクトリに作成する必要があります。
 
 <Note>
-  Any page in the `snippets` directory will be treated as a snippet and will not
-  be rendered into a standalone page. If you want to create a standalone page
-  from the snippet, import the snippet into another file and call it as a
-  component.
+  `snippets`ディレクトリ内のページはすべてスニペットとして扱われ、単独のページとして
+  レンダリングされません。スニペットから単独のページを作成したい場合は、スニペットを
+  別のファイルにインポートし、コンポーネントとして呼び出してください。
 </Note>
 
-### Default export
+### デフォルトエクスポート
 
-1. Add content to your snippet file that you want to re-use across multiple
-   locations. Optionally, you can add variables that can be filled in via props
-   when you import the snippet.
+1. 複数の場所で再利用したいコンテンツをスニペットファイルに追加します。
+   必要に応じて、スニペットをインポートする際にpropsを通じて入力できる
+   変数を追加することもできます。
 
 ```mdx snippets/my-snippet.mdx
-Hello world! This is my content I want to reuse across pages. My keyword of the
-day is {word}.
+こんにちは！これは複数のページで再利用したいコンテンツです。今日のキーワードは{word}です。
 ```
 
 <Warning>
-  The content that you want to reuse must be inside the `snippets` directory in
-  order for the import to work.
+  再利用したいコンテンツは、インポートが機能するために`snippets`ディレクトリ内に
+  配置する必要があります。
 </Warning>
 
-2. Import the snippet into your destination file.
+2. スニペットを目的のファイルにインポートします。
 
 ```mdx destination-file.mdx
 ---
-title: My title
-description: My Description
+title: タイトル
+description: 説明文
 ---
 
 import MySnippet from '/snippets/path/to/my-snippet.mdx';
 
-## Header
+## ヘッダー
 
 Lorem impsum dolor sit amet.
 
-<MySnippet word="bananas" />
+<MySnippet word="バナナ" />
 ```
 
-### Reusable variables
+### 再利用可能な変数
 
-1. Export a variable from your snippet file:
+1. スニペットファイルから変数をエクスポートします：
 
 ```mdx snippets/path/to/custom-variables.mdx
-export const myName = 'my name';
+export const myName = '私の名前';
 
-export const myObject = { fruit: 'strawberries' };
+export const myObject = { fruit: 'いちご' };
 ```
 
-2. Import the snippet from your destination file and use the variable:
+2. 目的のファイルからスニペットをインポートし、変数を使用します：
 
 ```mdx destination-file.mdx
 ---
-title: My title
-description: My Description
+title: タイトル
+description: 説明文
 ---
 
 import { myName, myObject } from '/snippets/path/to/custom-variables.mdx';
 
-Hello, my name is {myName} and I like {myObject.fruit}.
+こんにちは、私の名前は{myName}で、{myObject.fruit}が好きです。
 ```
 
-### Reusable components
+### 再利用可能なコンポーネント
 
-1. Inside your snippet file, create a component that takes in props by exporting
-   your component in the form of an arrow function.
+1. スニペットファイル内で、アロー関数の形式でコンポーネントをエクスポートすることで、
+   propsを受け取るコンポーネントを作成します。
 
 ```mdx snippets/custom-component.mdx
 export const MyComponent = ({ title }) => (
   <div>
     <h1>{title}</h1>
-    <p>... snippet content ...</p>
+    <p>... スニペットの内容 ...</p>
   </div>
 );
 ```
 
 <Warning>
-  MDX does not compile inside the body of an arrow function. Stick to HTML
-  syntax when you can or use a default export if you need to use MDX.
+  MDXはアロー関数の本体内ではコンパイルされません。可能な限りHTML構文を使用するか、
+  MDXを使用する必要がある場合はデフォルトエクスポートを使用してください。
 </Warning>
 
-2. Import the snippet into your destination file and pass in the props
+2. スニペットを目的のファイルにインポートし、propsを渡します
 
 ```mdx destination-file.mdx
 ---
-title: My title
-description: My Description
+title: タイトル
+description: 説明文
 ---
 
 import { MyComponent } from '/snippets/custom-component.mdx';
 
 Lorem ipsum dolor sit amet.
 
-<MyComponent title={'Custom title'} />
+<MyComponent title={'カスタムタイトル'} />
 ```
