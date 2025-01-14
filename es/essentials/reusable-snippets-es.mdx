@@ -15,13 +15,13 @@ import SnippetIntro from '/snippets/snippet-intro.mdx';
 <Note>
   Cualquier página en el directorio `snippets` será tratada como un fragmento y no
   se renderizará como una página independiente. Si deseas crear una página independiente
-  a partir del fragmento, importa el fragmento a otro archivo y úsalo como un
+  a partir del fragmento, importa el fragmento en otro archivo y llámalo como un
   componente.
 </Note>
 
-### Exportación predeterminada
+### Exportación por defecto
 
-1. Agrega al archivo de fragmento el contenido que deseas reutilizar en múltiples
+1. Agrega contenido a tu archivo de fragmento que desees reutilizar en múltiples
    ubicaciones. Opcionalmente, puedes agregar variables que se pueden completar mediante props
    cuando importes el fragmento.
 
@@ -91,10 +91,10 @@ export const MyComponent = ({ title }) => (
 
 <Warning>
   MDX no se compila dentro del cuerpo de una función flecha. Utiliza la sintaxis HTML
-  cuando sea posible o usa una exportación predeterminada si necesitas usar MDX.
+  cuando sea posible o usa una exportación por defecto si necesitas usar MDX.
 </Warning>
 
-2. Importa el fragmento en tu archivo de destino y pasa los props
+2. Importa el fragmento en tu archivo de destino y pasa las props
 
 ```mdx destination-file.mdx
 ---

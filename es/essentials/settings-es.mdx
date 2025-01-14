@@ -1,6 +1,6 @@
 ---
 title: 'Configuración Global'
-description: 'Mintlify te da control total sobre la apariencia de tu documentación usando el archivo mint.json'
+description: 'Mintlify te da control total sobre el aspecto y funcionamiento de tu documentación usando el archivo mint.json'
 icon: 'gear'
 ---
 
@@ -9,14 +9,14 @@ Cada sitio de Mintlify necesita un archivo `mint.json` con la configuración bá
 ## Propiedades
 
 <ResponseField name="name" type="string" required>
-Nombre de tu proyecto. Se utiliza para el título global.
+Nombre de tu proyecto. Usado para el título global.
 
 Ejemplo: `mintlify`
 
 </ResponseField>
 
 <ResponseField name="navigation" type="Navigation[]" required>
-  Un array de grupos con todas las páginas dentro de cada grupo
+  Un array de grupos con todas las páginas dentro de ese grupo
   <Expandable title="Navigation">
     <ResponseField name="group" type="string">
     El nombre del grupo.
@@ -35,7 +35,7 @@ Ejemplo: `mintlify`
 </ResponseField>
 
 <ResponseField name="logo" type="string or object">
-  Ruta a la imagen del logo u objeto con rutas para las imágenes del logo en modo "light" y "dark"
+  Ruta a la imagen del logo u objeto con rutas para el logo en modo "light" y "dark"
   <Expandable title="Logo">
     <ResponseField name="light" type="string">
       Ruta al logo en modo claro
@@ -44,7 +44,7 @@ Ejemplo: `mintlify`
       Ruta al logo en modo oscuro
     </ResponseField>
     <ResponseField name="href" type="string" default="/">
-      Hacia dónde te dirige el logo al hacer clic
+      Hacia dónde enlaza el logo al hacer clic
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -57,10 +57,10 @@ Ejemplo: `mintlify`
   Códigos de color hexadecimal para tu tema global
   <Expandable title="Colors">
     <ResponseField name="primary" type="string" required>
-      El color primario. Se usa más frecuentemente para contenido resaltado, encabezados de sección, acentos, en modo claro
+      El color primario. Usado más frecuentemente para contenido resaltado, encabezados de sección, acentos, en modo claro
     </ResponseField>
     <ResponseField name="light" type="string">
-      El color primario para modo oscuro. Se usa más frecuentemente para contenido resaltado, encabezados de sección, acentos, en modo oscuro
+      El color primario para modo oscuro. Usado más frecuentemente para contenido resaltado, encabezados de sección, acentos, en modo oscuro
     </ResponseField>
     <ResponseField name="dark" type="string">
       El color primario para botones importantes
@@ -80,7 +80,7 @@ Ejemplo: `mintlify`
 </ResponseField>
 
 <ResponseField name="topbarLinks" type="TopbarLink[]">
-  Array de `name`s y `url`s de enlaces que deseas incluir en la barra superior
+  Array de `name`s y `url`s de enlaces que quieres incluir en la barra superior
   <Expandable title="TopbarLink">
     <ResponseField name="name" type="string">
     El nombre del botón.
@@ -100,7 +100,7 @@ Ejemplo: `mintlify`
     Link muestra un botón. GitHub muestra la información del repositorio en la URL proporcionada, incluyendo el número de estrellas de GitHub.
     </ResponseField>
     <ResponseField name="url" type="string">
-    Si es `link`: A dónde enlaza el botón.
+    Si es `link`: A qué enlaza el botón.
     
     Si es `github`: Enlace al repositorio del cual cargar la información de GitHub.
     </ResponseField>
@@ -112,34 +112,34 @@ Ejemplo: `mintlify`
 </ResponseField>
 
 <ResponseField name="versions" type="string[]">
-  Array de nombres de versiones. Úsalo solo si deseas mostrar diferentes versiones
-  de la documentación con un menú desplegable en la barra de navegación.
+  Array de nombres de versiones. Úsalo solo si quieres mostrar diferentes versiones
+  de documentación con un menú desplegable en la barra de navegación.
 </ResponseField>
 
 <ResponseField name="anchors" type="Anchor[]">
-  Un array de anclajes, incluye el `icon`, `color`, y `url`.
+  Un array de anclas, incluye el `icon`, `color`, y `url`.
   <Expandable title="Anchor">
     <ResponseField name="icon" type="string">
-    El icono de [Font Awesome](https://fontawesome.com/search?q=heart) usado para mostrar el anclaje.
+    El icono de [Font Awesome](https://fontawesome.com/search?q=heart) usado para destacar el ancla.
 
     Ejemplo: `comments`
     </ResponseField>
     <ResponseField name="name" type="string">
-    El nombre de la etiqueta del anclaje.
+    El nombre de la etiqueta del ancla.
 
     Ejemplo: `Comunidad`
     </ResponseField>
     <ResponseField name="url" type="string">
-      El inicio de la URL que marca qué páginas van en el anclaje. Generalmente, es el nombre de la carpeta donde colocas tus páginas.
+      El inicio de la URL que marca qué páginas van en el ancla. Generalmente, es el nombre de la carpeta donde colocas tus páginas.
     </ResponseField>
     <ResponseField name="color" type="string">
-      El color hexadecimal del fondo del icono del anclaje. También puede ser un gradiente si pasas un objeto con las propiedades `from` y `to` que sean cada una un color hexadecimal.
+      El color hexadecimal del fondo del icono del ancla. También puede ser un degradado si pasas un objeto con las propiedades `from` y `to` que son cada una un color hexadecimal.
     </ResponseField>
     <ResponseField name="version" type="string">
-      Se usa si deseas ocultar un anclaje hasta que se seleccione la versión correcta de la documentación.
+      Se usa si quieres ocultar un ancla hasta que se seleccione la versión correcta de la documentación.
     </ResponseField>
     <ResponseField name="isDefaultHidden" type="boolean" default="false">
-      Pasa `true` si deseas ocultar el anclaje hasta que enlaces directamente a alguien a la documentación dentro de él.
+      Pasa `true` si quieres ocultar el ancla hasta que enlaces directamente a alguien a la documentación dentro de ella.
     </ResponseField>
     <ResponseField name="iconType" default="duotone" type="string">
       Uno de: "brands", "duotone", "light", "sharp-solid", "solid", o "thin"
@@ -149,10 +149,10 @@ Ejemplo: `mintlify`
 </ResponseField>
 
 <ResponseField name="topAnchor" type="Object">
-  Anula las configuraciones predeterminadas para el anclaje superior.
+  Anula las configuraciones predeterminadas para el ancla superior.
   <Expandable title="Object">
     <ResponseField name="name" default="Documentation" type="string">
-      El nombre del anclaje superior
+      El nombre del ancla superior
     </ResponseField>
     <ResponseField name="icon" default="book-open" type="string">
       Icono de Font Awesome.
@@ -177,10 +177,10 @@ Ejemplo: `mintlify`
 </ResponseField>
 
 <ResponseField name="api" type="API">
-  Configuración para ajustes de API. Aprende más sobre las páginas de API en [API Components](/api-playground/demo).
+  Configuración para ajustes de API. Aprende más sobre páginas de API en [Componentes API](/api-playground/demo).
   <Expandable title="API">
     <ResponseField name="baseUrl" type="string">
-      La URL base para todos los endpoints de API. Si `baseUrl` es un array, habilitará múltiples opciones
+      La URL base para todos los endpoints de API. Si `baseUrl` es un array, permitirá múltiples opciones
       de URL base que el usuario puede alternar.
     </ResponseField>
 
@@ -197,7 +197,7 @@ Ejemplo: `mintlify`
         <ResponseField name="inputPrefix" type="string">
         El valor predeterminado que está diseñado para ser un prefijo para el campo de entrada de autenticación.
 
-        Por ejemplo, si un `inputPrefix` es `AuthKey`, heredaría el resultado de entrada predeterminado del campo de autenticación como `AuthKey`.
+        Ej: Si un `inputPrefix` de `AuthKey` heredaría el resultado de entrada predeterminado del campo de autenticación como `AuthKey`.
         </ResponseField>
       </Expandable>
     </ResponseField>
@@ -207,7 +207,7 @@ Ejemplo: `mintlify`
 
       <Expandable title="Playground">
         <ResponseField name="mode" default="show" type='"show" | "simple" | "hide"'>
-          Si el área de pruebas se está mostrando, oculta, o solo muestra el endpoint sin interactividad adicional del usuario `simple`
+          Si el área de pruebas está mostrándose, oculta, o solo mostrando el endpoint sin interactividad adicional del usuario `simple`
 
           Aprende más en las [guías del área de pruebas](/api-playground/demo)
         </ResponseField>
@@ -217,7 +217,7 @@ Ejemplo: `mintlify`
     <ResponseField name="maintainOrder" type="boolean">
       Habilitar esta bandera asegura que el orden de las claves en las páginas OpenAPI coincida con el orden de las claves definido en el archivo OpenAPI.
 
-      <Warning>Este comportamiento pronto estará habilitado por defecto, momento en el cual este campo será obsoleto.</Warning>
+      <Warning>Este comportamiento pronto estará habilitado por defecto, momento en el cual este campo quedará obsoleto.</Warning>
     </ResponseField>
 
   </Expandable>
@@ -287,7 +287,7 @@ Ejemplo: `mintlify`
       está establecido, por defecto usamos el mismo modo que el sistema operativo del usuario.
     </ResponseField>
     <ResponseField name="isHidden" type="boolean" default="false">
-      Establece como true para ocultar el interruptor de modo claro/oscuro. Puedes combinar `isHidden` con `default` para forzar que tu documentación use solo modo claro u oscuro. Por ejemplo:
+      Establece como true para ocultar el interruptor de modo claro/oscuro. Puedes combinar `isHidden` con `default` para forzar que tu documentación solo use modo claro u oscuro. Por ejemplo:
       
       <CodeGroup>
       ```json Only Dark Mode
@@ -311,6 +311,6 @@ Ejemplo: `mintlify`
 </ResponseField>
 
 <ResponseField name="backgroundImage" type="string">
-  Una imagen de fondo para mostrar detrás de cada página. Ver ejemplo en
+  Una imagen de fondo para mostrar detrás de cada página. Ver ejemplo con
   [Infisical](https://infisical.com/docs) y [FRPC](https://frpc.io).
 </ResponseField>
