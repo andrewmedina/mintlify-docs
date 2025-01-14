@@ -1,0 +1,32 @@
+---
+title: 'Documentation Summary'
+description: 'A summary of key documentation components'
+icon: 'book'
+---
+
+# Documentation Summary
+
+## Navigation
+The navigation system is a crucial part of the documentation structure:
+
+- Configured through `mint.json`
+- Supports recursive/nested navigation groups
+- Pages must be manually added to appear in navigation
+- File extensions (`.mdx`) are not needed in navigation configuration
+
+### Key Navigation Features
+1. **Basic Structure**
+   - Uses JSON format in `mint.json`
+   - Groups pages under logical sections
+   - Requires explicit page listing
+
+2. **Folder Organization**
+   - Pages can be organized in folders
+   - URL structure follows folder structure
+   - Example: `your-folder/your-page` creates URL `yoursite.com/your-folder/your-page`
+   - Note: Top-level `api` folder name is reserved
+
+3. **Hidden Pages**
+   - Pages not listed in `mint.json` won't appear in sidebar
+   - Hidden pages are still searchable
+   - Direct links to hidden pages remain functional
