@@ -52,34 +52,34 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "es/introduction-es",
+        "es/quickstart-es",
+        "es/development-es"
       ]
     },
     {
       "group": "Essentials",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "es/essentials/markdown-es",
+        "es/essentials/code-es",
+        "es/essentials/images-es",
+        "es/essentials/settings-es",
+        "es/essentials/navigation-es",
+        "es/essentials/reusable-snippets-es"
       ]
     },
     {
       "group": "API Documentation",
       "pages": [
-        "api-reference/introduction"
+        "es/api-reference/introduction-es"
       ]
     },
     {
       "group": "Endpoint Examples",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "es/api-reference/endpoint/get-es",
+        "es/api-reference/endpoint/create-es",
+        "es/api-reference/endpoint/delete-es"
       ]
     }
   ],
