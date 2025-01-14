@@ -1,16 +1,16 @@
 ---
-title: 'Navigation'
-description: 'The navigation field in mint.json defines the pages that go in the navigation menu'
+title: 'ナビゲーション'
+description: 'mint.jsonのナビゲーションフィールドは、ナビゲーションメニューに表示されるページを定義します'
 icon: 'map'
 ---
 
-The navigation menu is the list of links on every website.
+ナビゲーションメニューは、すべてのウェブサイトにあるリンクのリストです。
 
-You will likely update `mint.json` every time you add a new page. Pages do not show up automatically.
+新しいページを追加するたびに、`mint.json`を更新する必要があります。ページは自動的には表示されません。
 
-## Navigation syntax
+## ナビゲーション構文
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+ナビゲーション構文は再帰的であり、ネストされたナビゲーショングループを作成できます。ページ名に`.mdx`を含める必要はありません。
 
 <CodeGroup>
 
@@ -40,15 +40,15 @@ Our navigation syntax is recursive which means you can make nested navigation gr
 
 </CodeGroup>
 
-## Folders
+## フォルダ
 
-Simply put your MDX files in folders and update the paths in `mint.json`.
+MDXファイルをフォルダに配置し、`mint.json`内のパスを更新するだけです。
 
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+例えば、`https://yoursite.com/your-folder/your-page`にページを作成するには、`your-folder`というフォルダを作成し、その中に`your-page.mdx`というMDXファイルを配置します。
 
 <Warning>
 
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
+別のフォルダ内にネストしない限り、フォルダ名として`api`を使用することはできません。MintlifyはNext.jsを使用しており、トップレベルの`api`フォルダは内部サーバー呼び出し用に予約されています。`api-reference`のようなフォルダ名は使用可能です。
 
 </Warning>
 
@@ -61,6 +61,6 @@ You cannot use `api` for the name of a folder unless you nest it inside another 
 ]
 ```
 
-## Hidden Pages
+## 非表示ページ
 
-MDX files not included in `mint.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+`mint.json`に含まれていないMDXファイルはサイドバーには表示されませんが、検索バーから、また直接リンクすることでアクセス可能です。
