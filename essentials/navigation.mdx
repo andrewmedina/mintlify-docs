@@ -1,16 +1,16 @@
 ---
-title: 'Navigation'
-description: 'The navigation field in mint.json defines the pages that go in the navigation menu'
+title: 'Navigasi'
+description: 'Bagian navigasi ing mint.json nemtokake kaca-kaca sing dilebokake ing menu navigasi'
 icon: 'map'
 ---
 
-The navigation menu is the list of links on every website.
+Menu navigasi yaiku daftar pranala ing saben situs web.
 
-You will likely update `mint.json` every time you add a new page. Pages do not show up automatically.
+Sampeyan mesthine bakal nganyari `mint.json` saben nambah kaca anyar. Kaca ora otomatis ditampilake.
 
-## Navigation syntax
+## Sintaks Navigasi
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+Sintaks navigasi kita rekursif sing tegese sampeyan bisa nggawe kelompok navigasi sing kasusun. Sampeyan ora perlu nyertakake `.mdx` ing jeneng kaca.
 
 <CodeGroup>
 
@@ -40,15 +40,15 @@ Our navigation syntax is recursive which means you can make nested navigation gr
 
 </CodeGroup>
 
-## Folders
+## Folder
 
-Simply put your MDX files in folders and update the paths in `mint.json`.
+Cukup lebokake berkas MDX ing folder lan nganyari jalur ing `mint.json`.
 
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+Contone, kanggo duwe kaca ing `https://yoursite.com/your-folder/your-page` sampeyan kudu nggawe folder sing jenenge `your-folder` sing ngemot berkas MDX sing jenenge `your-page.mdx`.
 
 <Warning>
 
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
+Sampeyan ora bisa nggunakake `api` kanggo jeneng folder kajaba sampeyan ndlesepake ing folder liya. Mintlify nggunakake Next.js sing nyimpen folder `api` tingkat puncak kanggo panggilan server internal. Jeneng folder kayata `api-reference` bakal ditampa.
 
 </Warning>
 
@@ -61,6 +61,8 @@ You cannot use `api` for the name of a folder unless you nest it inside another 
 ]
 ```
 
-## Hidden Pages
+## Kaca Kadhelikake
 
-MDX files not included in `mint.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+Berkas MDX sing ora kalebu ing `mint.json` ora bakal ditampilake ing sidebar nanging bisa diakses liwat bilah telusuran lan kanthi langsung menyang pranala kasebut.
+</fileContent>
+</invoke>

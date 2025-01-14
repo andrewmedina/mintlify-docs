@@ -1,15 +1,15 @@
 ---
-title: 'Development'
-description: 'Preview changes locally to update your docs'
+title: 'Pangembangan'
+description: 'Preview owahan kanthi lokal kanggo nganyari dokumen sampeyan'
 ---
 
 <Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
+  **Prasyarat**: Mangga install Node.js (versi 19 utawa luwih dhuwur) sadurunge nerusake.
 </Info>
 
-Follow these steps to install and run Mintlify on your operating system:
+Tutna langkah-langkah iki kanggo masang lan mbukak Mintlify ing sistem operasi sampeyan:
 
-**Step 1**: Install Mintlify:
+**Langkah 1**: Masang Mintlify:
 
 <CodeGroup>
 
@@ -23,31 +23,31 @@ yarn global add mintlify
 
 </CodeGroup>
 
-**Step 2**: Navigate to the docs directory (where the `mint.json` file is located) and execute the following command:
+**Langkah 2**: Pindhah menyang direktori docs (ing ngendi file `mint.json` manggon) lan jalanke printah iki:
 
 ```bash
 mintlify dev
 ```
 
-A local preview of your documentation will be available at `http://localhost:3000`.
+Preview lokal saka dokumentasi sampeyan bakal kasedhiya ing `http://localhost:3000`.
 
-### Custom Ports
+### Port Kustom
 
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. To run Mintlify on port 3333, for instance, use this command:
+Standar, Mintlify nggunakake port 3000. Sampeyan bisa ngowahi port sing digunakake Mintlify nganggo tandha `--port`. Kanggo mbukak Mintlify ing port 3333, contone, gunakake printah iki:
 
 ```bash
 mintlify dev --port 3333
 ```
 
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
+Yen sampeyan nyoba mbukak Mintlify ing port sing wis digunakake, bakal nggunakake port sing kasedhiya sabanjure:
 
 ```md
-Port 3000 is already in use. Trying 3001 instead.
+Port 3000 wis digunakake. Nyoba 3001.
 ```
 
-## Mintlify Versions
+## Versi Mintlify
 
-Please note that each CLI release is associated with a specific version of Mintlify. If your local website doesn't align with the production version, please update the CLI:
+Mangga cathet menawa saben release CLI ana hubungane karo versi tartamtu saka Mintlify. Yen website lokal sampeyan ora cocog karo versi produksi, mangga nganyari CLI:
 
 <CodeGroup>
 
@@ -61,9 +61,9 @@ yarn global upgrade mintlify
 
 </CodeGroup>
 
-## Validating Links
+## Validasi Link
 
-The CLI can assist with validating reference links made in your documentation. To identify any broken links, use the following command:
+CLI bisa mbantu validasi referensi link sing digawe ing dokumentasi sampeyan. Kanggo ngenali link sing rusak, gunakake printah iki:
 
 ```bash
 mintlify broken-links
@@ -72,35 +72,35 @@ mintlify broken-links
 ## Deployment
 
 <Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
+  Editor ora winates kasedhiya ing [Pro Plan](https://mintlify.com/pricing) lan
+  ing nduwure.
 </Tip>
 
-If the deployment is successful, you should see the following:
+Yen deployment kasil, sampeyan bakal weruh:
 
 <Frame>
   <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
 </Frame>
 
-## Code Formatting
+## Format Kode
 
-We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
+Kita nyaranake nggunakake ekstensi ing IDE sampeyan kanggo ngenali lan format MDX. Yen sampeyan pengguna VSCode, pertimbangake [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) kanggo sorotan sintaks, lan [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) kanggo format kode.
 
-## Troubleshooting
+## Ngatasi Masalah
 
 <AccordionGroup>
-  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
+  <Accordion title='Kesalahan: Ora bisa ngemot modul "sharp" nggunakake runtime darwin-arm64'>
 
-    This may be due to an outdated version of node. Try the following:
-    1. Remove the currently-installed version of mintlify: `npm remove -g mintlify`
-    2. Upgrade to Node v19 or higher.
-    3. Reinstall mintlify: `npm install -g mintlify`
+    Iki bisa amarga versi node sing lawas. Coba langkah-langkah iki:
+    1. Mbusak versi mintlify sing wis dipasang: `npm remove -g mintlify`
+    2. Upgrade menyang Node v19 utawa luwih dhuwur.
+    3. Masang maneh mintlify: `npm install -g mintlify`
   </Accordion>
 
-  <Accordion title="Issue: Encountering an unknown error">
+  <Accordion title="Masalah: Nemokake kesalahan sing ora dingerteni">
   
-    Solution: Go to the root of your device and delete the \~/.mintlify folder. Afterwards, run `mintlify dev` again.
+    Solusi: Pindhah menyang root piranti sampeyan lan busak folder ~/.mintlify. Sabanjure, jalanke `mintlify dev` maneh.
   </Accordion>
 </AccordionGroup>
 
-Curious about what changed in the CLI version? [Check out the CLI changelog.](https://www.npmjs.com/package/mintlify?activeTab=versions)
+Penasaran karo apa sing owah ing versi CLI? [Deleng changelog CLI.](https://www.npmjs.com/package/mintlify?activeTab=versions)

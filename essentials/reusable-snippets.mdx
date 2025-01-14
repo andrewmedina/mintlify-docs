@@ -1,6 +1,6 @@
 ---
-title: Reusable Snippets
-description: Reusable, custom snippets to keep content in sync
+title: Snippet sing Bisa Digunakake Maneh
+description: Snippet sing bisa digunakake maneh, kustomisasi kanggo njaga konten tetep sinkron
 icon: 'recycle'
 ---
 
@@ -8,22 +8,22 @@ import SnippetIntro from '/snippets/snippet-intro.mdx';
 
 <SnippetIntro />
 
-## Creating a custom snippet
+## Nggawe snippet kustom
 
-**Pre-condition**: You must create your snippet file in the `snippets` directory.
+**Pra-kondisi**: Sampeyan kudu nggawe berkas snippet ing direktori `snippets`.
 
 <Note>
-  Any page in the `snippets` directory will be treated as a snippet and will not
-  be rendered into a standalone page. If you want to create a standalone page
-  from the snippet, import the snippet into another file and call it as a
-  component.
+  Kabeh kaca ing direktori `snippets` bakal dianggep minangka snippet lan ora 
+  bakal dirender dadi kaca mandiri. Yen sampeyan pengin nggawe kaca mandiri 
+  saka snippet, impor snippet menyang berkas liya lan panggil minangka 
+  komponen.
 </Note>
 
-### Default export
+### Ekspor default
 
-1. Add content to your snippet file that you want to re-use across multiple
-   locations. Optionally, you can add variables that can be filled in via props
-   when you import the snippet.
+1. Tambahake konten menyang berkas snippet sing pengin sampeyan gunakake maneh ing 
+   lokasi akeh. Opsional, sampeyan bisa nambahake variabel sing bisa diisi liwat 
+   props nalika sampeyan ngimpor snippet.
 
 ```mdx snippets/my-snippet.mdx
 Hello world! This is my content I want to reuse across pages. My keyword of the
@@ -31,11 +31,11 @@ day is {word}.
 ```
 
 <Warning>
-  The content that you want to reuse must be inside the `snippets` directory in
-  order for the import to work.
+  Konten sing pengin sampeyan gunakake maneh kudu ana ing direktori `snippets` 
+  supaya impor bisa mlaku.
 </Warning>
 
-2. Import the snippet into your destination file.
+2. Impor snippet menyang berkas tujuan.
 
 ```mdx destination-file.mdx
 ---
@@ -52,9 +52,9 @@ Lorem impsum dolor sit amet.
 <MySnippet word="bananas" />
 ```
 
-### Reusable variables
+### Variabel sing bisa digunakake maneh
 
-1. Export a variable from your snippet file:
+1. Ekspor variabel saka berkas snippet:
 
 ```mdx snippets/path/to/custom-variables.mdx
 export const myName = 'my name';
@@ -62,7 +62,7 @@ export const myName = 'my name';
 export const myObject = { fruit: 'strawberries' };
 ```
 
-2. Import the snippet from your destination file and use the variable:
+2. Impor snippet saka berkas tujuan lan gunakake variabel:
 
 ```mdx destination-file.mdx
 ---
@@ -75,10 +75,10 @@ import { myName, myObject } from '/snippets/path/to/custom-variables.mdx';
 Hello, my name is {myName} and I like {myObject.fruit}.
 ```
 
-### Reusable components
+### Komponen sing bisa digunakake maneh
 
-1. Inside your snippet file, create a component that takes in props by exporting
-   your component in the form of an arrow function.
+1. Ing njero berkas snippet, gawe komponen sing nampa props kanthi ngekspor 
+   komponen sampeyan ing wujud fungsi panah.
 
 ```mdx snippets/custom-component.mdx
 export const MyComponent = ({ title }) => (
@@ -90,11 +90,11 @@ export const MyComponent = ({ title }) => (
 ```
 
 <Warning>
-  MDX does not compile inside the body of an arrow function. Stick to HTML
-  syntax when you can or use a default export if you need to use MDX.
+  MDX ora ngompilasi ing njero badan fungsi panah. Gunakake sintaks HTML 
+  nalika sampeyan bisa utawa gunakake ekspor default yen sampeyan butuh nggunakake MDX.
 </Warning>
 
-2. Import the snippet into your destination file and pass in the props
+2. Impor snippet menyang berkas tujuan lan liwatake props
 
 ```mdx destination-file.mdx
 ---
