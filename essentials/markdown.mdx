@@ -1,20 +1,20 @@
 ---
-title: 'Markdown Syntax'
-description: 'Text, title, and styling in standard markdown'
+title: 'Sintaxis de Markdown'
+description: 'Texto, título y estilo en markdown estándar'
 icon: 'text-size'
 ---
 
-## Titles
+## Títulos
 
-Best used for section headers.
+Se utilizan mejor para encabezados de sección.
 
 ```md
 ## Titles
 ```
 
-### Subtitles
+### Subtítulos
 
-Best use to subsection headers.
+Se utilizan mejor para encabezados de subsección.
 
 ```md
 ### Subtitles
@@ -22,54 +22,54 @@ Best use to subsection headers.
 
 <Tip>
 
-Each **title** and **subtitle** creates an anchor and also shows up on the table of contents on the right.
+Cada **título** y **subtítulo** crea un ancla y también aparece en la tabla de contenidos a la derecha.
 
 </Tip>
 
-## Text Formatting
+## Formato de Texto
 
-We support most markdown formatting. Simply add `**`, `_`, or `~` around text to format it.
+Admitimos la mayoría del formato markdown. Simplemente agrega `**`, `_`, o `~` alrededor del texto para darle formato.
 
-| Style         | How to write it   | Result          |
-| ------------- | ----------------- | --------------- |
-| Bold          | `**bold**`        | **bold**        |
-| Italic        | `_italic_`        | _italic_        |
-| Strikethrough | `~strikethrough~` | ~strikethrough~ |
+| Estilo        | Cómo escribirlo   | Resultado      |
+| ------------- | ----------------- | -------------- |
+| Negrita       | `**negrita**`     | **negrita**    |
+| Cursiva       | `_cursiva_`       | _cursiva_      |
+| Tachado       | `~tachado~`       | ~tachado~      |
 
-You can combine these. For example, write `**_bold and italic_**` to get **_bold and italic_** text.
+Puedes combinarlos. Por ejemplo, escribe `**_negrita y cursiva_**` para obtener texto en **_negrita y cursiva_**.
 
-You need to use HTML to write superscript and subscript text. That is, add `<sup>` or `<sub>` around your text.
+Necesitas usar HTML para escribir texto en superíndice y subíndice. Es decir, agrega `<sup>` o `<sub>` alrededor de tu texto.
 
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
+| Tamaño de Texto | Cómo escribirlo           | Resultado              |
+| --------------- | ------------------------- | --------------------- |
+| Superíndice     | `<sup>superíndice</sup>`  | <sup>superíndice</sup> |
+| Subíndice       | `<sub>subíndice</sub>`    | <sub>subíndice</sub>   |
 
-## Linking to Pages
+## Enlaces a Páginas
 
-You can add a link by wrapping text in `[]()`. You would write `[link to google](https://google.com)` to [link to google](https://google.com).
+Puedes agregar un enlace envolviendo el texto en `[]()`. Por ejemplo, escribirías `[enlace a google](https://google.com)` para crear un [enlace a google](https://google.com).
 
-Links to pages in your docs need to be root-relative. Basically, you should include the entire folder path. For example, `[link to text](/writing-content/text)` links to the page "Text" in our components section.
+Los enlaces a páginas en tu documentación deben ser relativos a la raíz. Básicamente, debes incluir toda la ruta de carpetas. Por ejemplo, `[enlace a texto](/writing-content/text)` enlaza a la página "Texto" en nuestra sección de componentes.
 
-Relative links like `[link to text](../text)` will open slower because we cannot optimize them as easily.
+Los enlaces relativos como `[enlace a texto](../text)` se abrirán más lentamente porque no podemos optimizarlos tan fácilmente.
 
-## Blockquotes
+## Citas en Bloque
 
-### Singleline
+### Una Línea
 
-To create a blockquote, add a `>` in front of a paragraph.
+Para crear una cita en bloque, agrega un `>` delante de un párrafo.
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
+> Dorothy la siguió a través de muchas de las hermosas habitaciones de su castillo.
 
 ```md
 > Dorothy followed her through many of the beautiful rooms in her castle.
 ```
 
-### Multiline
+### Múltiples Líneas
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
+> Dorothy la siguió a través de muchas de las hermosas habitaciones de su castillo.
 >
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+> La Bruja le ordenó limpiar las ollas y calderos, barrer el suelo y mantener el fuego alimentado con leña.
 
 ```md
 > Dorothy followed her through many of the beautiful rooms in her castle.
@@ -79,7 +79,7 @@ To create a blockquote, add a `>` in front of a paragraph.
 
 ### LaTeX
 
-Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex component.
+Mintlify admite [LaTeX](https://www.latex-project.org) a través del componente Latex.
 
 <Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
 
