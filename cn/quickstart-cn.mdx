@@ -1,0 +1,79 @@
+---
+title: '快速入门'
+description: '5分钟内开始构建出色的文档'
+---
+
+## 设置您的开发环境
+
+了解如何在本地更新文档并将其部署到公共环境。
+
+### 编辑和预览
+
+<AccordionGroup>
+  <Accordion icon="github" title="在本地克隆您的文档">
+    在入职过程中，我们在您的 Github 上创建了一个包含文档内容的仓库。您可以在我们的
+    [控制面板](https://dashboard.mintlify.com)上找到这个仓库。要在本地克隆该仓库，
+    请在终端中按照这些[说明](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    进行操作。
+  </Accordion>
+  <Accordion icon="rectangle-terminal" title="预览更改">
+    预览功能帮助您确保更改效果符合预期。我们构建了一个命令行界面来在本地渲染这些更改。
+    1. 安装 [Mintlify CLI](https://www.npmjs.com/package/mintlify) 以使用以下命令在本地预览文档更改：
+    ``` npm i -g mintlify ```
+    2. 在文档根目录（即 `mint.json` 所在位置）运行以下命令：
+    ``` mintlify dev ```
+  </Accordion>
+</AccordionGroup>
+
+### 部署您的更改
+
+<AccordionGroup>
+
+<Accordion icon="message-bot" title="安装我们的 Github 应用">
+  我们的 Github 应用会自动将您的更改部署到文档网站，因此您无需手动管理部署。
+  您可以在[控制面板](https://dashboard.mintlify.com)上找到安装链接。
+  一旦机器人安装成功，仓库的提交哈希值旁边应该会出现一个检查标记。
+</Accordion>
+<Accordion icon="rocket" title="推送您的更改">
+  [将更改提交并推送到 Git](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository#about-git-push)
+  以更新您的文档网站。如果推送后没有看到 Github 应用成功部署您的更改，
+  您也可以通过我们的[控制面板](https://dashboard.mintlify.com)手动更新文档。
+</Accordion>
+
+</AccordionGroup>
+
+## 更新您的文档
+
+使用 MDX 语法和 React 组件直接在文件中添加内容。您可以使用我们的任何组件，甚至可以构建自己的组件。
+
+<CardGroup>
+
+<Card title="自定义文档样式" icon="paintbrush" href="/settings/global">
+  为您的文档添加个性化品牌风格。
+</Card>
+
+<Card
+  title="添加 API 端点"
+  icon="square-code"
+  href="/api-playground/configuration"
+>
+  实现您的 OpenAPI 规范并启用 API 用户交互。
+</Card>
+
+<Card
+  title="集成分析功能"
+  icon="chart-mixed"
+  href="/analytics/supported-integrations"
+>
+  从用户与文档的交互中获取见解。
+</Card>
+
+<Card
+  title="在自定义域名上托管"
+  icon="browser"
+  href="/settings/custom-domain/subdomain"
+>
+  在您自己网站的子域名上保持文档。
+</Card>
+
+</CardGroup>

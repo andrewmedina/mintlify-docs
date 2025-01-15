@@ -1,0 +1,59 @@
+---
+title: '图片和嵌入内容'
+description: '添加图片、视频和其他HTML元素'
+icon: 'image'
+---
+
+<img
+  style={{ borderRadius: '0.5rem' }}
+  src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
+/>
+
+## 图片
+
+### 使用Markdown
+
+[markdown语法](https://www.markdownguide.org/basic-syntax/#images)允许你使用以下代码添加图片
+
+```md
+![title](/path/image.jpg)
+```
+
+请注意，图片文件大小必须小于5MB。否则，我们建议使用[Cloudinary](https://cloudinary.com/)或[S3](https://aws.amazon.com/s3/)等服务进行托管。然后你可以使用该URL进行嵌入。
+
+### 使用嵌入
+
+要获得更多的图片自定义选项，你也可以使用[嵌入](/writing-content/embed)来添加图片
+
+```html
+<img height="200" src="/path/image.jpg" />
+```
+
+## 嵌入和HTML元素
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/4KzFe50RQkQ"
+  title="YouTube视频播放器"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  style={{ width: '100%', borderRadius: '0.5rem' }}
+></iframe>
+
+<br />
+
+<Tip>
+
+Mintlify支持[Markdown中的HTML标签](https://www.markdownguide.org/basic-syntax/#html)。如果你更喜欢HTML标签而不是Markdown语法，这将很有帮助，并允许你创建具有无限灵活性的文档。
+
+</Tip>
+
+### iFrames
+
+在文档中加载另一个HTML页面。最常用于嵌入视频。
+
+```html
+<iframe src="https://www.youtube.com/embed/4KzFe50RQkQ"> </iframe>
+```
